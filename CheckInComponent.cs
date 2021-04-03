@@ -27,6 +27,7 @@ namespace CheckInComponent
 
         const string CheckInEvent = Component.InfoPanel + Component.CheckIn;
         const string CheckInRequest = Component.PassengerService + Component.CheckIn;
+        const string GatePlacement = Component.CheckIn + Component.Gates;
         //const string regPas = Component.Registration + Component.Passenger;
         //const string regStorage = Component.Registration + Component.Storage;
         //const string regStorageBaggage = Component.Registration + Component.Storage + Subject.Baggage;
@@ -36,7 +37,7 @@ namespace CheckInComponent
 
         public static readonly List<string> queues = new List<string>
         {
-            CheckInEvent, CheckInRequest /*regPas, regStorage, regStorageBaggage, regCash, cashReg, regGrServ*/
+            CheckInEvent, CheckInRequest, GatePlacement /*regPas, regStorage, regStorageBaggage, regCash, cashReg, regGrServ*/
         };
 
         readonly ConcurrentQueue<CheckInRequest> checkInRequests = new ConcurrentQueue<CheckInRequest>();
